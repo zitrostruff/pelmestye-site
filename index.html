@@ -11,9 +11,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /* Фон – теперь только картинка, без чёрной подложки */
-            background: url('bg.jpg') no-repeat center center;
-            background-size: cover;
+            /* Фото + подсказка, если не загрузится */
+            background: 
+                url('bg.jpg') no-repeat center center,
+                #1a1a1a repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 5px,
+                    rgba(255,255,255,0.02) 5px,
+                    rgba(255,255,255,0.02) 10px
+                );
+            background-size: cover, auto;
             color: #fff;
             font-family: 'Georgia', serif;
             overflow: hidden;
@@ -22,7 +30,6 @@
         .content {
             text-align: center;
             padding: 20px;
-            background: transparent;
         }
 
         h1 {
@@ -47,7 +54,7 @@
 <body>
     <div class="content">
         <h1>ПЕЛЬМЕСТЬЕ</h1>
-        <p>скоро открытие</p>
+        <p>СКОРО ОТКРЫТИЕ</p>
     </div>
 </body>
 </html>
